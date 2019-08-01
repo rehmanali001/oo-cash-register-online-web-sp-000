@@ -13,5 +13,5 @@ class CashRegister
         @items << title
         count += 1
   end
-end
   end
+end
