@@ -16,7 +16,20 @@ class CashRegister
 
    def add_item(title, price, quantity = 1)
     @last_trans = quantity ? @total += price * quantity : @total += price
+    # @title = title
     @quantity = quantity
+
+     # if quantity
+    #   count = 0
+    #   while count < quantity
+    #   @items << title
+    #   count += 1
+    #   end
+    # else
+    #   @items << title
+    # end
+
+     # refactored
       count = 0
       while count < quantity
         @items << title
