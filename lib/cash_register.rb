@@ -6,13 +6,11 @@ class CashRegister
   end
   
   def add_item(item, price, quantity = 1)
-     @previous_total = @total
-    if quantity == nil
-      @total = @total + price
-      @items << title
-    else
-      @total = @total + (price * quantity)
-      quantity.times {@items << title}
-    end
+     @last_trans = quantity ? @total += price * quantity : @total += price
+    @quantity = quantity
+      count = 0
+      while count < quantity
+        @items << title
+        count += 1
+      end
   end
-end 
